@@ -117,7 +117,7 @@ def evaluateBoard(board, first):
     return totalEvaluate
 
 def minimaxroot(depth, board, maximizing, first):
-    bestValue = -9999
+    bestValue = -9999999
     bestMove = None
 
     for move in board.legal_moves:
@@ -135,7 +135,7 @@ def minimax(depth, board, alpha, beta, maximizing, first):
         return -evaluateBoard(board, first)
 
     if maximizing:
-        bestValue = -9999
+        bestValue = -999999
 
         for move in board.legal_moves:
             board.push(move)
@@ -148,7 +148,7 @@ def minimax(depth, board, alpha, beta, maximizing, first):
         return bestValue
 
     else:
-        bestValue = 9999
+        bestValue = 999999
 
         for move in board.legal_moves:
             board.push(move)
